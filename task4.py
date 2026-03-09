@@ -7,7 +7,7 @@ def limit_infty(f,g):
         return 0
 
     if df == dg:
-        return f.coeffs[-1]/g.coeffs[-1]
+        return f.coef[-1]/g.coef[-1]
 
     return float("inf")
 
