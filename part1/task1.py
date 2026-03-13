@@ -1,5 +1,5 @@
 import numpy as np
-from class_polynom import Polynom
+from part1.class_polynom import Polynom
 
 def in_span(f, gs):
     max_deg = max([f.deg()] + [g.deg() for g in gs])

@@ -1,4 +1,4 @@
-from class_polynom import Polynom
+from part1.class_polynom import Polynom
 
 def limit_infty(f, g):
     df = f.deg()

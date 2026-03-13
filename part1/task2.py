@@ -1,5 +1,5 @@
 import math
-from class_polynom import Polynom
+from part1.class_polynom import Polynom
 
 def proiz(poly):
     if poly.deg() == 0:
