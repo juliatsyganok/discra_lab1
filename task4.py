@@ -1,19 +1,16 @@
-def limit_infty(f,g):
+from class_polynom import Polynom
 
-    df=f.degree()
-    dg=g.degree()
-
+def limit_infty(f, g):
+    df = f.deg()
+    dg = g.deg()
     if df < dg:
         return 0
-
     if df == dg:
-        return f.coef[-1]/g.coef[-1]
-
+        return f.coef[-1] / g.coef[-1]
     return float("inf")
 
-def limit_at(f,g,A):
 
-    if g(A)!=0:
-        return f(A)/g(A)
+f = Polynom([1,0,1])
+g = Polynom([1,1])
 
-    return None
+print(limit_infty(f, g))

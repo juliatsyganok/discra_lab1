@@ -25,16 +25,16 @@ class Polynom:
         return Polynom(res)
 
     def __mul__(self, other):
-        res = [0]*(len(self.coef)+len(other.coef)-1)
+        res = [0] * (len(self.coef) + len(other.coef) - 1)
 
-        for i,a in enumerate(self.coef):
-            for j,b in enumerate(other.coef):
-                res[i+j] += a*b
+        for i, a in enumerate(self.coef):
+            for j, b in enumerate(other.coef):
+                res[i + j] += a * b
 
         return Polynom(res)
 
     def scale(self, k):
-        return Polynom([k*c for c in self.coef])
+        return Polynom([k * c for c in self.coef])
 
     def __repr__(self):
         return f"Polynom({self.coef})"

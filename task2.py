@@ -1,20 +1,21 @@
 import math
 from class_polynom import Polynom
 
-def derivative(poly):
-    if poly.degree() == 0:
+def proiz(poly):
+    if poly.deg() == 0:
         return Polynom([0])
-
-    coef = [(i)*poly.coef[i] for i in range(1,len(poly.coef))]
+    coef = [(i) * poly.coef[i] for i in range(1, len(poly.coef))]
     return Polynom(coef)
 
 
-def shift_basis(f,a):
-    coef=[]
-    p=f
-
-    for k in range(f.degree()+1):
-        coef.append(p(a)/math.factorial(k))
-        p=derivative(p)
-
+def bas(f, a):
+    coef = []
+    p = f
+    for k in range(f.deg() + 1):
+        coef.append(p(a) / math.factorial(k))
+        p = proiz(p)
     return coef
+
+f = Polynom([0, 0, 1])
+
+print(bas(f, 1))
