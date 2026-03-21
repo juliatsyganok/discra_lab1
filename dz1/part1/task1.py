@@ -4,7 +4,6 @@ def gauss(G, F):
     n = len(F)
     m = len(G[0])
     mat = [G[i][:] + [F[i]] for i in range(n)]
-    
     col = 0
     row = 0
     while row < n and col < m:
